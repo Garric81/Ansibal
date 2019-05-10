@@ -1,0 +1,1 @@
+ansible (# name group server dnsservers) -m setup
