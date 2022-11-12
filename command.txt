@@ -1,6 +1,20 @@
+###############################################################################
+#
+# my  lessons  
+#
+#
+#
+############################################################################
 ansible all -m ping
 ansible all -m command-a /sbin/reboot-t now
 ansible all -m service name=httpd state=started/stop/restart
 ansible 172.20.32.40 -m service name=nginx state=started/stop/restart
 ansible host -m shell -a set
 ansible all -m copy -a content="Hello World" dest=/tmp
+ansible all -m shell -a cat /tmp/motd
+##############################
+ansible -u root - i invetory 172.20.32.** -- ask-pass -m raw -a yum install python 3 -y
+ansible-playbook --syntax-check nginx.yml
+ansible-playbook --syntax-check nginx.yml -v -vv -vvv
+ansible-playbook -C nginx.yml
+######################### commad  of andible ######################

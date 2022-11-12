@@ -1,0 +1,41 @@
+---
+- name: enable webserver
+  host: 172.20.*.*
+  task:
+    - name: install http and firewalld
+      yum:
+        name:
+          - httpd
+          - firewalld
+        state: latest
+          
+    - name: install welcom page
+      copy:
+        content: "Hello world my test"
+        dest: /var/www/html/index.thml
+    - name: start web service
+      service:
+        name: httpd
+        enabled: true
+        state: started
+    - name: start firefalld service
+      service:
+        name: firewalld
+        enable: true
+        state: started
+     - name: open firewalld
+       firewalld:
+         service: http
+         permanent: true
+         state: enabled
+         immediate: yes
+
+- name: test webserver access
+  hosts: localhost
+  become: no
+  task:
+    - name: connect to  the  web server
+      uri:
+        uri: http://172.20.**.**
+        return_content: yes
+        status-code: 200
