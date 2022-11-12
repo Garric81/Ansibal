@@ -1,8 +1,8 @@
 ####################################################################
 ###
-###
-###Ansibal #
-###
+### Create Autor BorovichenkoNG@gmail.com
+###Ansibal   My  testing project#
+### Данный  проект создан  в тестовых целях  обучения
 ##################################################################
 Red Hat Certified Specialist in Ansible Network Automation - EX457
-Python script
+Python script, bash,  powershell,   example
