@@ -1,0 +1,6 @@
+ansible all -m ping
+ansible all -m command-a /sbin/reboot-t now
+ansible all -m service name=httpd state=started/stop/restart
+ansible 172.20.32.40 -m service name=nginx state=started/stop/restart
+ansible host -m shell -a set
+ansible all -m copy -a content="Hello World" dest=/tmp
