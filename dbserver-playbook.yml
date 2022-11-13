@@ -1,0 +1,12 @@
+---
+- hosts: mysql
+  vars:
+    mysql_root_password: password
+
+  tasks:
+    - name: install mysql and python-myslqdb
+      apt: name={{ item}} update_cashe=yes cache_valid_time=3600 state=present
+      with_items:
+      - python3-mysqldb
+      - mysql-server
+
