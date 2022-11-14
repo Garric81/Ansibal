@@ -19,3 +19,4 @@ ansible-playbook --syntax-check nginx.yml -v -vv -vvv
 ansible-playbook -C nginx.yml
 ######################### commad  of andible ######################
 ansible-playbook -C user.yml
+ansible-playbook test.yml -i localhost,

@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS test ( message  varchar(255) not NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8; INSERT INTO TEST(message) VALUE('Ansible is fun')
