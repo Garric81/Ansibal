@@ -1,0 +1,5 @@
+Users:
+   jsoc_admins:
+     username: jsoc_admins
+     homedir: /home/jsoc_admins
+     shell: /bin/bash

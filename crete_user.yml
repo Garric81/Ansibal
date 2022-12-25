@@ -1,0 +1,9 @@
+---
+- name:  create a user using a variable
+  hosts: all
+  vars:
+    user:  jsoc_admins
+  tasks:
+    - name: create user {{ user }}
+      user:
+        name: "{{ user }}"
