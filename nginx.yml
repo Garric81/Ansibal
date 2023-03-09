@@ -1,6 +1,6 @@
 ---
 - name: install nginx
-  hosts: 172.20.32.40
+  hosts: 192.168.1.140
   task:
   - name: install nginx
     yum: install=nginx
